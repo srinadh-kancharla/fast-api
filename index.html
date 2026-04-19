@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Telusko Trac</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>📦 Telusko Trac</h1>
+    <button class="refresh">Refresh</button>
+  </div>
+
+  <!-- Top Section -->
+  <div class="top">
+    <span class="badge">Total: <span id="total">0</span></span>
+    <input type="text" id="search" placeholder="Search by id, name or description...">
+  </div>
+
+  <!-- Main Grid -->
+  <div class="grid">
+
+    <!-- Add Product -->
+    <div class="card">
+      <h2>Add Product</h2>
+      <div class="form">
+        <input id="id" placeholder="ID">
+        <input id="name" placeholder="Name">
+        <input id="desc" placeholder="Description">
+        <input id="price" placeholder="Price">
+        <input id="qty" placeholder="Quantity">
+      </div>
+      <button onclick="addProduct()">Add</button>
+    </div>
+
+    <!-- Info Box -->
+    <div class="card info">
+      <h2>Track. Manage. Grow.</h2>
+      <p>Streamline your inventory with smart product management.</p>
+    </div>
+
+  </div>
+
+  <!-- Product Table -->
+  <div class="card table-card">
+    <h2>Products</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="productList">
+        <tr><td colspan="6">No products found.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
